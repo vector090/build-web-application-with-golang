@@ -21,6 +21,7 @@ func show_basic_struct() {
 
 	bob := person{age: 24, name: "Bob"}
 
+	fmt.Printf("tom = %v\n", tom)
 	fmt.Printf("tom = %+v\n", tom)
 	fmt.Printf("bob = %#v\n", bob)
 }

@@ -9,13 +9,13 @@ import (
 )
 
 const (
-	DB_USER     = "user"
-	DB_PASSWORD = ""
+	DB_USER     = "dev"
+	DB_PASSWORD = "dev"
 	DB_NAME     = "test"
 )
 
 func main() {
-	dbSouce := fmt.Sprintf("%v:%v@/%v?charset=utf8", DB_USER, DB_PASSWORD, DB_NAME)
+	dbSouce := fmt.Sprintf("%v:%v@tcp(192.168.100.214:3306)/%v?charset=utf8", DB_USER, DB_PASSWORD, DB_NAME)
 	db, err := sql.Open("mysql", dbSouce)
 	checkErr(err)
 	defer db.Close()

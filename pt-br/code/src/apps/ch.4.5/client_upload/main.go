@@ -41,6 +41,6 @@ func postFile(filename string, targetUrl string) {
 }
 func main() {
 	target_url := "http://localhost:9090/upload"
-	filename := "../file.txt"
+	filename := "main.go"
 	postFile(filename, target_url)
 }

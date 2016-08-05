@@ -18,6 +18,7 @@ type Student struct {
 func main() {
 	// initialize a student
 	mark := Student{Human{"Mark", 25, 120}, "Computer Science"}
+	//	mark := Student{name: "Mark", age: 25, weight: 120, "Computer Science"}
 
 	// access fields
 	fmt.Println("His name is ", mark.name)

@@ -30,10 +30,11 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 func uploadHandler(w http.ResponseWriter, r *http.Request) {
 	var errs validator.Errors
 	r.ParseMultipartForm(32 * MiB_UNIT)
-	token := r.Form.Get("token")
-	if err := submissions.CheckThenMarkToken(token); err != nil {
-		errs = validator.Errors{[]error{err}}
-	} else {
+	//	token := r.Form.Get("token")
+	//	if err := submissions.CheckThenMarkToken(token); err != nil {
+	//		errs = validator.Errors{[]error{err}}
+	//	} else {
+	{
 		file, handler, err := r.FormFile("uploadfile")
 		checkError(err)
 		saveUpload(file, handler)
